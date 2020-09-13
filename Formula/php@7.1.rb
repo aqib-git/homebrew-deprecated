@@ -90,7 +90,8 @@ class PhpAT71 < Formula
     # Each extension that is built on Mojave needs a direct reference to the
     # sdk path or it won't find the headers
     headers_path = "=#{MacOS.sdk_path_if_needed}/usr"
-
+    imap_path = "/usr/local/Cellar/imap-uw/2007f_1/include/imap"
+    
     args = %W[
       --prefix=#{prefix}
       --localstatedir=#{var}
@@ -163,7 +164,7 @@ class PhpAT71 < Formula
       --with-xmlrpc
       --with-xsl#{headers_path}
       --with-zlib#{headers_path}
-      --with-imap=#{Formula["imap-uw"].opt_prefix}
+      --with-imap#{imap_path}
       --with-imap-ssl=#{Formula["openssl@1.1"].opt_prefix}
       --with-kerberos
     ]
