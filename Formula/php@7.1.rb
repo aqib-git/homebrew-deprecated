@@ -161,6 +161,9 @@ class PhpAT71 < Formula
       --with-xmlrpc
       --with-xsl#{headers_path}
       --with-zlib#{headers_path}
+      --with-imap=#{Formula["imap-uw"].opt_prefix}
+      --with-imap-ssl=#{Formula["openssl@1.1"].opt_prefix}
+      --with-kerberos
     ]
 
     system "./configure", *args
