@@ -37,6 +37,7 @@ class PhpAT71 < Formula
   depends_on "tidy-html5"
   depends_on "unixodbc"
   depends_on "webp"
+  depends_on "imap-uw"
 
   # PHP build system incorrectly links system libraries
   # see https://github.com/php/php-src/pull/3472
@@ -120,6 +121,7 @@ class PhpAT71 < Formula
       --enable-sysvshm
       --enable-wddx
       --enable-zip
+      --enable-imap
       --with-apxs2=#{Formula["httpd"].opt_bin}/apxs
       --with-bz2#{headers_path}
       --with-curl=#{Formula["curl-openssl"].opt_prefix}
